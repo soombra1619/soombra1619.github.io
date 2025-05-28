@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Warhammer 40 000</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Trajan Pro', serif;
+            background: url('https://images.unsplash.com/photo-1602524814341-fd4d95d0d37c?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: #ddd;
+            display: flex;
+            height: 100vh;
+        }
+        /* Menú lateral */
+        .sidebar {
+            width: 240px;
+            background-color: rgba(0, 0, 0, 0.8);
+            height: 100vh;
+            padding: 20px;
+            position: fixed;
+            border-right: 2px solid #5a2121;
+            overflow-y: auto;
+        }
+        .sidebar h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #f1c40f;
+            text-shadow: 1px 1px 2px #000;
+        }
+        .sidebar ul {
+            list-style: none;
+        }
+        .sidebar ul li {
+            margin: 1rem 0;
+            padding: 0.5rem;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+            border-radius: 4px;
+        }
+        .sidebar ul li:hover {
+            background-color: #5a2121;
+        }
+        /* Contenido principal */
+        .main-content {
+            margin-left: 240px;
+            padding: 30px;
+            width: calc(100% - 240px);
+            overflow-y: auto;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #e74c3c;
+            text-shadow: 2px 2px 4px #000;
+        }
+        /* Grid de tarjetas */
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .card {
+            background-color: rgba(10, 10, 10, 0.7);
+            border: 1px solid #5a2121;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.8);
+            text-align: center;
+        }
+        .card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: #f1c40f;
+            text-shadow: 1px 1px 2px #000;
+        }
+        .card p {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+        .emblem {
+            width: 60px;
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        /* Estilos para Lore */
+        .lore-container {
+            max-width: 900px;
+            margin: 30px auto 0 auto; /* centrado horizontal */
+            text-align: center;
+        }
+        .lore-container img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.7);
+        }
+        .info-box {
+            background-color: rgba(0,0,0,0.75);
+            border: 2px solid #5a2121;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 25px auto 0 auto;
+            max-width: 700px;
+            color: #f1c40f;
+            font-size: 1.25rem;
+            line-height: 1.6;
+            text-shadow: 1px 1px 2px #000;
+        }
+        .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: start;
+    padding: 20px;
+}
+
+.item {
+    text-align: center;
+    max-width: 300px;
+}
+
+.army-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.info-box {
+    margin-top: 10px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 8px;
+}
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>WARHAMMER 40K</h2>
+        <ul>
+            <li>Facciones</li>
+            <li>Lore</li>
+            <li>Constructor de Ejército</li>
+            <li>Contacto</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <h1>Facción Adeptus Astartes</h1>
+        <div class="dashboard" id="facciones-content">
+            <div class="card">
+                <img src="https://lh7-us.googleusercontent.com/L5_xOO_l1edabvPelJlIYHj1CQiYlBzMy7uoNJh2ZN36xN_3yhOQh-U45NcnVzS16dTFfXHPAJQ1zuX_sdg-nVGJ41lam1xE4LcdL2Vtvge4FhJO7nzoUvg5TEl39XScj6nMQNsFZ0un8bn67Nw_4A" alt="Ultramarines Emblema" class="emblem" />
+                <h2>Ultramarines</h2>
+                <h2>Primarca:Robutte Guilliman El hijo vengador</h2>
+                <p>Fortaleza: Macragge</p>
+                <p>Maestro de capitulo:Lord Macragge Marneus Augustus Calgar</p>
+                <p>Veteranos: 1200+</p>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBiLKiDxrjJS7Q40yMgRVh3kwibuTGyc2nHw&s" alt="Blood Angels Emblem" class="emblem" />
+                <h2>Angeles Sangrientos</h2>
+                <h2>Primarca:Sanguinius el angel</h2>
+                <p>Fortaleza: Baal</p>
+                <p>Maestro de capitulo:Luis Dante</p>
+                <p>Veteranos: 800+</p>
+            </div>
+            <div class="card">
+                <img src="https://i.redd.it/for-the-lion-dark-angels-warhammer-40k-v0-b8suuq2pmmlb1.jpg?width=400&format=pjpg&auto=webp&s=6dc8345851ac1d614b9671bdcb0acee98e8b743f" alt="Dark Angels Emblem" class="emblem" />
+                <h2>Angeles Oscuros</h2>
+                <h2>Primarca:Lion el'jonson hijo del bosque</h2>
+                <p>Fortaleza: The Rock</p>
+                <p>Maestro de capitulo:Gran Maestre Supremo Azrael</p>
+                <p>Veteranos: 900+</p>
+            </div>
+            <div class="card">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/61p78qQzJdL._AC_UL495_SR435,495_.jpg" alt="Space Wolves Emblem" class="emblem" />
+                <h2>Lobos Espaciales</h2>
+                <h2>Primarca:Leman Russ, el Rey Lobo de Fenris.</h2>
+                <p>Fortaleza: Fenris</p>
+                <p>Maestro de capitulo:El Gran lobo Logan Grimnar</p>
+                <p>Veteranos: 600+</p>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBiLKiDxrjJS7Q40yMgRVh3kwibuTGyc2nHw&s" alt="Space Wolves Emblem" class="emblem" />
+                <h2>Puños Imperiales</h2>
+                <h2>Primarca:Rogal Dorn Pretoriano de Terra</h2>
+                <p>Fortaleza: Falange</p>
+                <p>Maestro de capitulo:Gregor Dessian</p>
+                <p>Veteranos: 800+</p>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZM3mq5PybbI61kl-HG88LdYBH1Tn8CVQbqA&s" alt="Salamanders Emblem" class="emblem" />
+                <h2>Salamandras</h2>
+                <h2>Primarca: Vulkan, el Forjador</h2>
+                <p>Fortaleza: Monte del Fuego Eterno, Nocturne</p>
+                <p>Maestro de capítulo: Tu'Shan</p>
+                <p>Veteranos: 700+</p>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTln5r-1bEdJcRB2ZaqvmvcdillFUp1ElqVVq-pjg-SZ8dqT0Ty79tSNnMLnzmNI6xksPs&usqp=CAU" alt="Iron Hands Emblem" class="emblem" />
+                <h2>Manos de Hierro</h2>
+                <h2>Primarca: Ferrus Manus, el Señor de Hierro</h2>
+                <p>Fortaleza: Medusa</p>
+                <p>Maestro de capítulo: Kardan Stronos</p>
+                <p>Veteranos: 600+</p>
+            </div>
+            <div class="card">
+                <img src="https://vignette.wikia.nocookie.net/warhammer40k/images/5/51/Khan_Icon.png/revision/latest/scale-to-width-down/340?cb=20160903000011" alt="White Scars Emblem" class="emblem" />
+                <h2>Cicatrices Blancas</h2>
+                <h2>Primarca: Jaghatai Khan, el Cazador del Viento</h2>
+                <p>Fortaleza: Quan Zhou, planeta Chogoris</p>
+                <p>Maestro de capítulo: Kor'sarro Khan (actualmente también Señor de la Caza)</p>
+                <p>Veteranos: 700+</p>
+            </div>
+            <div class="card">
+                <img src="https://fbi.cults3d.com/uploaders/16097837/illustration-file/498d1ba9-526b-4f59-8bad-0c2aa438d126/raven-guard.jpg" alt="Raven Guard Emblem" class="emblem" />
+                <h2>Guardia del Cuervo</h2>
+                <h2>Primarca: Corvus Corax, el Señor de las Sombras</h2>
+                <p>Fortaleza: Torre del Cuervo, planeta Deliverance</p>
+                <p>Maestro de capítulo: Kayvaan Shrike</p>
+                <p>Veteranos: 500+</p>
+            </div>
+        </div>
+    </div>
+    <script>
+    const mainContent = document.getElementById("main-content");
+    const buttons = document.querySelectorAll(".sidebar ul li");
+    const faccionesOriginales = document.getElementById("facciones-content").innerHTML;
+
+    buttons[0].addEventListener("click", () => {
+        mainContent.innerHTML = `
+            <h1>Facción Adeptus Astartes</h1>
+            <div class="dashboard">
+                ${faccionesOriginales}
+            </div>
+        `;
+    });
+
+    buttons[1].addEventListener("click", () => {
+        mainContent.innerHTML = `
+            <h1>Lore del Universo Warhammer 40K</h1>
+            <div class="lore-container">
+                <img src="https://images.ctfassets.net/ur4mtvpiojcu/2cYUN0e9AIxfjFtdxJQcjm/31b3d536ff4caebc36d0614931340458/LP40K-241409-600HERO-40K.jpg" alt="Lore Warhammer" />
+                <div class="info-box">
+                    Warhammer 40,000 es un universo de ciencia ficción oscuro y violento, 
+                    ambientado en el lejano milenio 41. La humanidad, gobernada por un 
+                    Imperio teocrático y militarista, lucha por sobrevivir frente a amenazas alienígenas, 
+                    demoníacas y traiciones internas. En este futuro sin esperanza, 
+                    solo existe guerra constante.
+                </div>
+            </div>
+        `;
+    });
+buttons[2].addEventListener("click", () => {
+    mainContent.innerHTML = `
+        <h1>Constructor de Ejército</h1>
+        <div class="grid-container">
+            <div class="item">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_692953-MLU72090501058_102023-O.webp" alt="Ejército Warhammer" class="army-image" />
+                <div class="info-box">
+                    <p>Warhammer 40.000 Command Edition Caja de inicio $120.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR32DwAjNv-0vVc-I-vTL81EzcFB2XElC8NUw&s" alt="Ejército Warhammer" class="army-image" />
+                <div class="info-box">
+                    <p>Warhammer 40000 Leviathan, la caja de lanzamiento de la Décima edición. $347,50</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="https://assets.warhammer-community.com/04-thh_minis-box-mjo23md9oj.jpg" alt="Ejército Warhammer" class="army-image" />
+                <div class="info-box">
+                    <p>Warhammer 40000 Saturnine, la caja de lanzamiento de la Herejía de Horus edición. $247,50</p>
+                </div>
+            </div>
+        </div>
+    `;
+});
+    buttons[3].addEventListener("click", () => {
+        mainContent.innerHTML = `
+            <h1>Contacto</h1>
+            <div class="info-box">
+                ¿Tienes dudas o sugerencias? Contáctanos en <a href="mailto:warhammer@imperium.com" style="color: #f1c40f;">warhammer@imperium.com</a>
+            </div>
+        `;
+    });
+</script>
+</body>
+</html>
